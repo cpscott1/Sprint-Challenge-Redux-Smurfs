@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import axios from 'axios';
+import { connect } from 'react-redux';
+import { addSmurf } from '../actions';
 class SmurfForm extends Component {
   constructor(props) {
     super(props);
@@ -55,4 +56,8 @@ class SmurfForm extends Component {
   }
 }
 
-export default SmurfForm;
+const mapStateToProps = state => ({
+  smurfs: state.smurfs
+})
+
+export default connect(mapStateToProps, { addSmurf })(SmurfForm);

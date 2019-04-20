@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-
+import { connect } from 'react-redux';
+import { fetchSmurfs } from '../actions';
 import Smurf from './Smurf';
 
 class Smurfs extends Component {
@@ -29,4 +30,8 @@ Smurf.defaultProps = {
  smurfs: [],
 };
 
-export default Smurfs;
+const mapStateToProps = state => ({
+  smurfs: state.smurfs
+})
+
+export default connect(mapStateToProps, { fetchSmurfs })(Smurfs);

@@ -2,10 +2,10 @@ import { FETCH_START, FETCH_SUCCESS, ADD_START, ADD_SUCCESS, FAILURE } from '../
 
  const initialState = {
    smurfs: [],
-   fetchingSmurfs: false
-   addingSmurf: false
-   updatingSmurf: false
-   deletingSmurf: false
+   fetchingSmurfs: false,
+   addingSmurf: false,
+   updatingSmurf: false,
+   deletingSmurf: false,
    error: null
  }
 
